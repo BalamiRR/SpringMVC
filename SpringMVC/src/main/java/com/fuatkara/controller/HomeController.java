@@ -1,7 +1,7 @@
 package com.fuatkara.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,5 +26,21 @@ public class HomeController {
 		model.addAttribute("surname", surname);
 		return "home";
 	}
+	
+	//http://localhost:8080/SpringMVC/info/furkan/1/5/IstanubulEsenler
+	@RequestMapping(value= "/source/{buildingNo}/{city}/{address}", method = RequestMethod.GET)
+	public String addressOf(
+			@PathVariable("buildingNo") int buildingNo,
+			@PathVariable("city") int city,
+			@PathVariable("address") String address,
+			Model model) {
+		model.addAttribute("buildingNo", buildingNo);
+		model.addAttribute("city",city);
+		model.addAttribute("address",address);		
+		return "home";    
+		//Bu return'e jsp dosyasinin adi yazilir, UNUTMA!!!
+	}
+	
+	
+	
 }
-
