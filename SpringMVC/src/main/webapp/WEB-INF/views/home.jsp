@@ -7,16 +7,13 @@
 <body>
 	<h1>Hello world! </h1>
 
-<P>  A Goster: ${ab}. </P>
-<P>  B Goster: ${abc}. </P>
-<P>  C Goster: ${abcd}. </P>
 <P>  ID Goster: ${id}. </P>
 <P>  Name Goster: ${name}. </P>
 <P>  Surname Goster: ${surname}. </P>
 <P>  A Goster: ${a}. </P>
 
-<P>  AGE : ${age} </P>
-<P>  ADDRESS NO : ${addressNo}. </P>
+<P>  AGE : ${buildingNo} </P>
+<P>  ADDRESS NO : ${city}. </P>
 <P>  ADDRESS : ${address}. </P>
 
 

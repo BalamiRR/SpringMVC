@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(value = "/info") 
@@ -27,7 +28,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	//http://localhost:8080/SpringMVC/info/furkan/1/5/IstanubulEsenler
+	//http://localhost:8080/SpringMVC/info/source/1/5/IstanubulEsenler
 	@RequestMapping(value= "/source/{buildingNo}/{city}/{address}", method = RequestMethod.GET)
 	public String addressOf(
 			@PathVariable("buildingNo") int buildingNo,
@@ -40,7 +41,4 @@ public class HomeController {
 		return "home";    
 		//Bu return'e jsp dosyasinin adi yazilir, UNUTMA!!!
 	}
-	
-	
-	
 }
